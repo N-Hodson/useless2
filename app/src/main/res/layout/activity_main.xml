@@ -46,4 +46,50 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progressBar_Main_Load"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="379dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_destruct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_main_useless"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <TextView
+        android:id="@+id/Text_Main_LoadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="13dp"
+        android:text="Loading Upmost Important documents"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar_Main_Load"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_main_useless" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/Group_Main_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="progressBar_Main_Load,Text_Main_LoadText"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/Group_Main_UI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="switch_main_useless,button_main_destruct,button_main_busy"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="66dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
