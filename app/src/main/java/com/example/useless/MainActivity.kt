@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.Switch
-import android.widget.Toast
+import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.Group
+import org.w3c.dom.Text
 
 //switch useless
 // self destruct button
@@ -27,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var UIgroup: Group
     lateinit var Loadgroup: Group
     lateinit var Bar: ProgressBar
+    lateinit var percent: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         UIgroup = findViewById(R.id.Group_Main_UI)
         Loadgroup = findViewById(R.id.Group_Main_loader)
         Bar = findViewById(R.id.progressBar_Main_Load)
+        percent = findViewById(R.id.text_main_percentage)
     }
 
     private fun startSwitchTimer() {
@@ -102,9 +103,9 @@ class MainActivity : AppCompatActivity() {
         var x = 0
         val uselessTimer = object : CountDownTimer(30000, 300) {
             override fun onTick(millisUntilFinished: Long) {
-
                 Bar.progress = x
                 x++
+                percent.text = "$x%"
             }
 
             override fun onFinish() {

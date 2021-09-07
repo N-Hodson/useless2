@@ -49,18 +49,18 @@
     <ProgressBar
         android:id="@+id/progressBar_Main_Load"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="379dp"
-        android:layout_height="55dp"
+        android:layout_width="336dp"
+        android:layout_height="45dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="121dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toTopOf="@+id/button_main_destruct"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch_main_useless"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.428" />
 
     <TextView
         android:id="@+id/Text_Main_LoadText"
@@ -70,17 +70,29 @@
         android:layout_marginTop="81dp"
         android:layout_marginEnd="177dp"
         android:layout_marginBottom="13dp"
-        android:text="Loading Upmost Important documents"
+        android:text="Loading Upmost Important Documents"
         app:layout_constraintBottom_toTopOf="@+id/progressBar_Main_Load"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch_main_useless" />
 
+    <TextView
+        android:id="@+id/text_main_percentage"
+        android:layout_width="36dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="352dp"
+        android:text="99%"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.Group
         android:id="@+id/Group_Main_loader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="progressBar_Main_Load,Text_Main_LoadText"
+        app:constraint_referenced_ids="progressBar_Main_Load,Text_Main_LoadText,text_main_percentage"
         tools:layout_editor_absoluteX="172dp"
         tools:layout_editor_absoluteY="122dp" />
 
